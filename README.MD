@@ -27,6 +27,10 @@ If you got a "no guest aditions" error doing vagrant up try installing this plug
 vagrant plugin install vagrant-vbguest
 ```
 
+## Usage
+
+Once you have finished provisioning the Vagrantfile with the previous step, access from the browser to the URL http://192.168.56.10 and there you can interact with the application, creating, listing, editing and deleting employees.
+
 ### References
 
 - PHP Aplication Source code: [Web Page](https://obedalvarado.pw/blog/crud-datos-empleados-php-mysql-bootstrap/)
