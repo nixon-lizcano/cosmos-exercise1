@@ -49,7 +49,6 @@ Vagrant.configure("2") do |config|
     end
 
     vm2.vm.provision "shell", inline: <<-SHELL
-      export DEBIAN_FRONTEND=noninteractive
       sudo apt-get update -y
       sudo apt-get upgrade -y
       sudo apt-get install net-tools -y
