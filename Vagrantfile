@@ -17,26 +17,21 @@ Vagrant.configure("2") do |config|
     end
 
     vm1.vm.provision "shell", inline: <<-SHELL
-        #sudo apt-get update -y
-	#sudo apt-get upgrade -y
-	#sudo apt-get install net-tools
-	#sudo apt-get install apache2 -y
-	#sudo apt-get install php libapache2-mod-php php-mysql -y
+        sudo apt-get update -y
+	sudo apt-get upgrade -y
+	sudo apt-get install net-tools
+	sudo apt-get install apache2 php7.2 libapache2-mod-php php-mysql -y
+	sudo service apache2 restart
 	
-	apt-get install apache2 -y
-        apt-get install libapache2-mod-php -y
-        apt-get install php-mysql -y
-        apt-get install mysql-client -y
-
         # Enable apache mod_rewrite
-        a2enmod rewrite
-        a2enmod actions
+        #a2enmod rewrite
+        #a2enmod actions
 
         # Change AllowOverride from None to All
-        sed -i '170,174 s/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+        #sed -i '170,174 s/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 
         # Start the webserver
-        service apache2 restart
+        #service apache2 restart
     SHELL
 
     vm1.vm.provision "shell", run: "always", inline: <<-SHELL
