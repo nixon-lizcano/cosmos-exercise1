@@ -1,4 +1,11 @@
-## Fetures
+# Exercise 1: Vagrantfile with 2 virtual machines
+
+For this exercise we used Vagrant as an open source tool that allows to create, configure and manage virtual machine boxes, and we tested it with a CRUD of employees, based on https://obedalvarado.pw/blog/crud-datos-empleados-php-mysql-bootstrap/.
+
+The Vagranfile instances two virtual machines, one with Ubuntu-22.04 and another with Centos Stream 8, both based on https://app.vagrantup.com/bento.
+
+## Features
+
 - MySQL server on port 3302
 - WebServer on port 80
 - Sync folder and private network among vms
