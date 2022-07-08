@@ -12,3 +12,7 @@ If you got a "no guest aditions" error doing vagrant up try installing this plug
 ```bash
 vagrant plugin install vagrant-vbguest
 ```
+
+### References
+
+- PHP Aplication Source code: [Web Page](https://obedalvarado.pw/blog/crud-datos-empleados-php-mysql-bootstrap/)
