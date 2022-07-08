@@ -50,8 +50,9 @@ Vagrant.configure("2") do |config|
     vm2.vm.provision "shell", inline: <<-SHELL
       sudo apt-get update -y
       sudo apt-get upgrade -y
-      sudo apt-get install net-tools
+      sudo apt-get install net-tools -y
       sudo apt-get install apache2 php7.2 libapache2-mod-php php-mysql -y
+      sudo apt-get install mysql-client -y
       sudo service apache2 restart
     SHELL
 
