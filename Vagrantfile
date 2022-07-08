@@ -45,7 +45,8 @@ Vagrant.configure("2") do |config|
     vm2.vm.provider "virtualbox" do |vb|
       vb.name = svName
       vb.gui = false
-      vb.memory = "1024"
+      vb.cpus = 2
+      vb.memory = "2048"
     end
 
     vm2.vm.provision "shell", inline: <<-SHELL
