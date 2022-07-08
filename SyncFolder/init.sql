@@ -3,6 +3,8 @@ CREATE USER IF NOT EXISTS 'vagrant_usr'@'192.168.56.10' IDENTIFIED BY 'Vagrant1*
 GRANT ALL PRIVILEGES ON * . * TO 'vagrant_usr'@'192.168.56.10';
 FLUSH PRIVILEGES;
 
+USE `vagrantdb`;
+
 CREATE TABLE IF NOT EXISTS `empleados` (
   `codigo` varchar(10) NOT NULL PRIMARY KEY,
   `nombres` varchar(50) NOT NULL,
