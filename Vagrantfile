@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
     end
 
     db.vm.provision "shell", inline: <<-SHELL
+      sudo dnf update -y
       sudo dnf install -y mysql-server
       sudo systemctl status mysqld
 
