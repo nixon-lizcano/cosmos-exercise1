@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
       sudo systemctl start mysqld
 
       sudo mysqladmin -u root password vagrant
-      cat /vagrant_data/SyncFolder/init.sql | sudo mysql -u root -pvagrant
+      cat /vagrant_data/SyncFolder/init.sql | sudo mysql --defaults-extra-file=/vagrant_data/SyncFolder/mysql.conf
     SHELL
   end
 
